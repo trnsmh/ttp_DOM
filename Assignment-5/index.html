@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div>
+      <h1>Woohooo</h1>
+    </div>
+    <select name="colors" id="color-select" onchange="selectColor(this.value)">
+      <option value="">Select A Color</option>
+      <option class="red" id="red" value="red">Red</option>
+      <option class="blue" id="blue" value="blue">Blue</option>
+      <option class="green" id="green" value="green">Green</option>
+      <option class="yellow" id="yellow" value="yellow">Yellow</option>
+      <option class="brown" id="brown" value="brown">Brown</option>
+      <option class="purple" id="purple" value="purple">Purple</option>
+      <option class="cyan" id="cyan" value="cyan">Cyan</option>
+    </select>
+    <div id="buttons">
+      <div id="addRowBtn" onClick="addRow()">
+        <button>Add Row</button>
+      </div>
+      <div id="removeRowBtn" onClick="removeRow()">
+        <button>Remove Row</button>
+      </div>
+      <div id="addColumnBtn" onClick="addColumn()">
+        <button>Add Column</button>
+      </div>
+      <div id="removeColumnBtn" onClick="removeColumn()">
+        <button>Remove Column</button>
+      </div>
+      <div id="colorAlluncoloredCellsBtn" onClick="colorAllUncoloredCells()">
+        <button>Color All Uncolored Cells</button>
+      </div>
+      <div id="colorAllCellsBtn" onClick="fillAllCells()">
+        <button>Color All Cells</button>
+      </div>
+      <div id="resetColorOfCellsButton" onClick="clearAllCells()">
+        <button>Reset Color Of the Grid</button>
+      </div>
+    </div>
+    <div>
+      <table id="table">
+        <tr class="row">
+          <td onmousedown="cellMouseDown(this.id)" onmousemove="cellMouseMove(this.id)" 
+          onmouseup="cellMouseUp(this.id)" onclick="selectCell(this.id)" id="1" class="cell">T1</td>
+          <td onmousedown="cellMouseDown(this.id)" onmousemove="cellMouseMove(this.id)" 
+          onmouseup="cellMouseUp(this.id)" onclick="selectCell(this.id)" id="2" class="cell">T2</td>
+        </tr>
+        <tr class="row">
+          <td onmousedown="cellMouseDown(this.id)" onmousemove="cellMouseMove(this.id)" 
+          onmouseup="cellMouseUp(this.id)" onclick="selectCell(this.id)" id="3" class="cell">T3</td>
+          <td onmousedown="cellMouseDown(this.id)" onmousemove="cellMouseMove(this.id)" 
+          onmouseup="cellMouseUp(this.id)" onclick="selectCell(this.id)" id="4" class="cell">T4</td>
+        </tr>
+      </table>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
